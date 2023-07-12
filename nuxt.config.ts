@@ -6,7 +6,11 @@ export default defineNuxtConfig({
 	vue: {
 		propsDestructure: true,
 	},
-	components: [{ path: "~/components/nav" }, "~/components"],
+	components: [
+		{ path: "~/components/nav" },
+		{ path: "~/components/atoms" },
+		"~/components",
+	],
 	devtools: { enabled: true },
 	modules: [
 		"@nuxtjs/tailwindcss",
@@ -15,6 +19,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/google-fonts",
 		"nuxt-icon",
 		"@pinia/nuxt",
+		"@vueuse/nuxt",
 	],
 	googleFonts: {
 		families: {

@@ -1,12 +1,11 @@
 <template>
-    <div v-show="true" class="col-span-full overflow-hidden border-t border-white/10 py-8  lg:py-12">
+    <div class="col-span-full overflow-hidden border-t border-white/10 py-8  lg:py-12">
         <div class="wrapper">
             <h2 class="flex gap-2.5 lg:gap-5 before:w-1 before:bg-[#618967] uppercase font-bold text-xl lg:text-3xl">{{ title }}</h2>
-            <Swiper :simulateTouch="sourceType != 'touch'" :slidesPerView="1" :breakpoints="{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } }"
+            <Swiper :slidesPerView="1" :breakpoints="{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 4 } }"
                 class="swiper-category-catalog !overflow-visible mt-8 lg:mt-12" :spaceBetween="16">
                 <SwiperSlide v-for="item in products" :key="products.id" class="mr-4">
                     <CartCatalog :product="item" class="h-full" />
-                    {{ sourceType }}
                 </SwiperSlide>
             </Swiper>
         </div>
@@ -14,13 +13,10 @@
 </template>
 
 <script setup>
-import { useMouse } from '@vueuse/core'
 const { products = {} } = defineProps({
     title: String,
     products: Object
 })
-
-const { sourceType } = useMouse()
 </script>
 
 <style type="text/tailwindcss">

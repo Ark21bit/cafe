@@ -1,6 +1,6 @@
 <template>
     <div class="pt-12 lg:pt-20 pb-24 lg:pb-40 flex hero-bg bg-cover bg-center">
-        <div class="wrapper">            
+        <div class="wrapper">
             <div class="flex flex-col items-center gap-5 max-w-3xl">
                 <h1 class="uppercase text-center lg:text-6xl text-4xl -rotate-6">Доставка ВКУСНЕЙШИХ БЛЮд за 60 минут</h1>
                 <div class="-skew-x-12 -rotate-6 bg-gradient-to-r from-[#618967] to-[#72A479]">
@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-</template>background: linear-gradient(90deg, #211F20 0%, rgba(68, 64, 63, 0.00) 100%);
+</template>
 
 <script setup>
 
