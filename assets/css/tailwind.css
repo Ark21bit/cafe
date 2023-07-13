@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-	html {
+	/* html {
 		scroll-behavior: smooth;
-	}
+	} */
 	#__nuxt {
 		@apply flex min-h-screen flex-col justify-start whitespace-pre-line bg-white dark:bg-black font-Roboto bg-gradient-to-r from-[#211F20] to-[#44403F] text-white;
 	}

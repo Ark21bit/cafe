@@ -5,6 +5,10 @@ export default defineNuxtConfig({
 	},
 	vue: {
 		propsDestructure: true,
+		compilerOptions: {
+			isCustomElement: (tag: string) =>
+				["swiper-container", "swiper-slide"].includes(tag),
+		},
 	},
 	components: [
 		{ path: "~/components/nav" },
@@ -14,7 +18,6 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: [
 		"@nuxtjs/tailwindcss",
-		"nuxt-swiper",
 		"nuxt-icons",
 		"@nuxtjs/google-fonts",
 		"nuxt-icon",
@@ -26,9 +29,6 @@ export default defineNuxtConfig({
 			Roboto: true,
 		},
 		download: true,
-	},
-	swiper: {
-		modules: [],
 	},
 	imports: {
 		dirs: ["stores"],
