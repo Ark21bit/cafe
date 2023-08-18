@@ -18,14 +18,6 @@ register()
 
 const swiperContainerEl = ref()
 
-const test = ref(true)
-
-const { sourceType } = useMouse()
-
-watch(sourceType, () => {
-    swiperContainerEl.value.simulateTouch = sourceType.value == 'mouse'
-})
-
 onMounted(() => {
     const options = {
         injectStyles: [
